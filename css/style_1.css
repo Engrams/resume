@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*CSS document*/
+* {
+    font-family: "微软雅黑", serif;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}

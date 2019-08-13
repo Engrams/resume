@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*CSS document*/
+* {
+    font-family: "微软雅黑", serif;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.head {
+    margin: 0 auto;
+    height: 120px;
+    width: 2465px;
+    background-color: #666666;
+    color: white;
+    line-height: 120px;
+    padding-left: 35px;
+}
+
+.main {
+    margin: 0 auto;
+    width: 2500px;
+}
+
+.item {
+    height: 199px;
+}
+
+
+.content h3 {
+    display: inline;
+}
+.title {
+    font-size: 23px;
+    font-weight: bold;
+    width: 195px;
+    height: 198px;
+    float: left;
+    background-color: #cccccc;
+    border-bottom: 1px solid white;
+    text-align: center;
+    line-height: 198px;
+}
+
+.content {
+    height: 198px;
+    float: left;
+    width: 2290px;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 15px;
+}
+
+.clearfix {
+    clear: both;
+}
