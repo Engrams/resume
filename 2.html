@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .box {
+        padding-left: 300px;
+        }
+        .box1 {
+            width: 300px;
+            height: 200px;
+            float: left;
+            margin-left: -300px;
+            background-color: skyblue;
+        }
+        .box2 {
+            width: 100%;
+            mid-width: 0;
+            height: 200px;
+            float: left;
+            background-color: pink;
+        }
+
+        .pos {
+            position: relative;
+            clear: both;
+            padding-left: 300px;
+        }
+
+        .pos1 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            left: 0px;
+            background-color: pink;
+        }
+
+        .pos2 {
+
+            width: 100%;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .flex {
+            display: flex;
+            padding-left: 300px;
+        }
+
+        .flex1 {
+            width: 300px;
+            height: 200px;
+            background-color: skyblue;
+            margin-left: -300px;
+
+        }
+
+        .flex2 {
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box1">盒子一</div>
+    <div class="box2">盒子二</div>
+</div>
+
+<div class="pos">
+    <div class="pos1">盒子一</div>
+    <div class="pos2">盒子二</div>
+</div>
+
+<div class="flex">
+    <div class="flex1">盒子一</div>
+    <div class="flex2">盒子二</div>
+</div>
+</body>
+</html>
