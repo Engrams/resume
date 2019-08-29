@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Day9</title>
+    <style type="text/css">
+        body {
+            font-family:  Verdana;
+            /*font-family: sans-serif;*/
+            padding: 0;
+            margin: 0;
+        }
+
+        /*header css*/
+        .header {
+            background: url(images/Background.png) no-repeat;
+            height: 790px;
+            width: 1600px;
+            padding-top: 200px;
+            text-align: center;
+        }
+
+        .header h1,.header p{
+            color: white;
+            font-weight: 100;
+        }
+
+        .header h1 {
+            font-size: 62px;
+
+        }
+
+        .header p {
+            width: 770px;
+            margin: 80px auto;
+            font-size: 20px;
+            color: hsla(0,0%,100%,.6);
+        }
+
+        .login {
+            border: 1px solid hsla(0,0%,100%,.2);
+            width: 970px;
+            margin: 0 auto;
+        }
+
+        .login h1 {
+            font-size: 16px;
+            margin-top: 60px;
+        }
+
+        .login p {
+            font-size: 12px;
+            color: hsla(0,0%,100%,.2);
+            margin-top: 16px;
+        }
+
+        .info {
+            margin: 44px auto;
+        }
+
+        .in {
+            width: 291px;
+            height: 48px;
+            border: 1px solid hsla(0,0%,100%,.2);
+            /*display: block;*/
+            border-radius: 5px;
+            margin-right: 40px;
+            text-indent: 20px;
+            background-color: transparent;
+            font-size: 14px;
+            color: hsla(0,0%,100%,.2);
+        }
+
+        .btn {
+            width: 125px;
+            height: 50px;
+            background-color: white;
+            font-size: 14px;
+            border: 0;
+            font-weight: 500;
+            border-radius: 3px;
+        }
+
+        /*feature css*/
+        .feature {
+            width: 1600px;
+            height: 710px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .feature p {
+            font-size: 14px;
+            margin-top: 82px;
+            font-weight: bold;
+        }
+        .feature h1 {
+            font-weight: 100;
+            font-size: 42px;
+            width: 730px;
+            margin: 40px auto;
+        }
+
+        .item {
+            width: 1200px;
+            height: 285px;
+            padding-top: 40px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .item1 {
+            width: 370px;
+            text-align: left;
+            padding-left: 60px;
+            margin: 0 85px;
+        }
+
+        .item img {
+            float: left;
+            margin-left: -60px;
+        }
+
+        .item h3 {
+            font-size: 20px;
+            margin: 0;
+            width: 330px;
+        }
+
+        .item p {
+            font-size: 16px;
+            font-weight: 100;
+            margin: 28px 0 80px 0;
+        }
+
+        /*action css*/
+        .action {
+            width: 1600px;
+            height: 800px;
+            background: url(images/Background1.png);
+            position: relative;
+            overflow: auto;
+        }
+
+        .left {
+            width: 560px;
+            height: 450px;
+            margin: 190px 0 0 320px;
+            /*background-color: black;*/
+        }
+
+        .left h1 {
+            font-size: 42px;
+            width: 400px;
+            color: white;
+            font-weight: 100;
+        }
+
+        .left p {
+            font-size: 18px;
+            width: 380px;
+            color: hsla(0,0%,100%,.7);
+        }
+
+        .left a {
+            display: inline-block;
+            width: 240px;
+            height: 60px;
+            border: 1px solid #6c736f;
+            color: white;
+            line-height: 60px;
+            text-align: center;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 14px;
+        }
+
+        .left a:nth-of-type(1) {
+            border: 0;
+            color: black;
+            background-color: white;
+        }
+
+        .right {
+            position: absolute;
+            border: 1px solid #929492;
+            width: 645px;
+            height: 600px;
+            right: 0;
+            top: 105px;
+            border-radius: 40px 0 0 40px;
+        }
+
+        .right img {
+            margin: 28px 0 0 61px;
+        }
+
+        .circle {
+            border: 1px solid #929492;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 295px;
+            left: 30px;
+        }
+
+        /*feature1 css*/
+        .feature1 {
+            height: 580px;
+            width: 1600px;
+            border-bottom: 1px solid #e7e7e7;
+            text-align: center;
+        }
+
+        .feature1 h1 {
+            font-size: 42px;
+            font-weight: 100;
+            margin: 100px 0 80px 0;
+        }
+
+        .logos {
+            width: 955px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+        }
+
+        .text1 {
+            font-size: 16px;
+            color: #838383;
+            /*flex-grow: 1;*/
+            /*flex-shrink: 1;*/
+            flex-basis: 250px;
+            line-height: 25px;
+        }
+        /*feature2 css*/
+        .feature2 {
+            height: 1000px;
+            width: 1600px;
+            border-bottom: 1px solid #e7e7e7;
+        }
+
+        .content {
+            width: 980px;
+            height: 780px;
+            margin: 0 auto;
+            padding-top: 115px;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .content h1 {
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #838383;
+        }
+
+        .content img {
+            display: block;
+        }
+
+
+        .content1 {
+            margin-top: 80px;
+            width: 325px;
+            text-align: left;
+        }
+
+        /*feature3 css*/
+        .feature3 {
+            width: 1600px;
+            height: 1080px;
+            border-bottom: 1px solid #e7e7e7;
+            text-align: center;
+        }
+
+        .feature3 h1 {
+            font-size: 42px;
+            font-weight: 100;
+        }
+
+        .feature3 p {
+            font-size: 18px;
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        .content3 {
+            width: 970px;
+            height: 715px;
+            margin: 0 auto;
+            padding-top: 65px;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .img_content3 {
+            width: 470px;
+            height: 340px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mask {
+            width: 470px;
+            height: 340px;
+            position: absolute;
+            top: 0;
+            left: -2000px;
+            background-color: hsla(0,0%,10%,.7);
+            z-index: 0;
+        }
+
+
+        .mask h1 {
+            font-size: 20px;
+            color: white;
+            margin-top: 95px;
+        }
+
+        .mask p {
+            font-size: 12px;
+            color: hsla(0,0%,100%,.4);
+            width: 470px;
+            margin-bottom: 38px;
+        }
+
+        .mask img {
+            margin-left: 15px;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .img_content3:hover .mask {
+            /*top:0;*/
+            left: 0;
+            top: 0;
+        }
+
+        /*feature4 css*/
+        .feature4 {
+            width: 1600px;
+            height: 700px;
+            border-bottom: 1px solid #e7e7e7;
+        }
+
+        .contact {
+            width: 975px;
+            margin: 75px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form {
+            width: 470px;
+            height: 555px;
+            border: 1px solid #eeeeee;
+            border-radius: 15px;
+            text-align: center;
+
+        }
+
+        .form h1 {
+            font-weight: 100;
+            font-size: 16px;
+            margin: 50px 0;
+            color: #4e4e4e;
+        }
+
+        .show ,.show1{
+            width: 368px;
+            border: 1px solid #eeeeee;
+            text-indent: 20px;
+            font-size: 14px;
+            color: #989898;
+            margin-bottom: 30px;
+        }
+
+        .show {
+            height: 55px;
+        }
+
+        .show1 {
+            height: 122px;
+            overflow: hidden;
+            padding-top: 20px;
+            font-family: sans-serif;
+        }
+
+        .btn1 {
+            display: block;
+            width: 370px;
+            height: 50px;
+            color: white;
+            background-color: #141414;
+            border: 0;
+            margin: 0 auto;
+        }
+
+        .contacts {
+            width: 360px;
+            text-align: left;
+        }
+
+        .contacts h1 {
+            font-size: 42px;
+            font-weight: 100;
+        }
+
+        .contacts p {
+            font-size: 16px;
+            margin-bottom: 70px;
+            line-height: 25px;
+        }
+
+        .link {
+            width: 265px;
+            height: 45px;
+            padding-left: 45px;
+            margin-top: 30px;
+            line-height: 25px;
+        }
+
+        .link a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .link img {
+            float: left;
+            margin-left: -45px;
+        }
+
+        /*footer css*/
+        .footer {
+            width: 1600px;
+            height: 410px;
+            background-color: #141414;
+        }
+
+        .footer ul {
+           margin: 0;
+           padding: 0;
+        }
+
+        .footer_content {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 85px;
+        }
+
+
+        .footer_content li {
+            list-style-type: none;
+            float: left;
+            width: 300px;
+            line-height: 40px;
+            height: 40px;
+        }
+
+        .footer_content li a {
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            width: 300px;
+        }
+
+        .footer_content p {
+            width: 270px;
+            font-size: 14px;
+            color: #3c3c3c;
+            line-height: 25px;
+        }
+
+        .footer_content ul li li a {
+            color: #3c3c3c;
+        }
+
+        .footer_content img {
+            margin-right: 25px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hello World</h1>
+        <p>China is speeding up strategic plan, standards, traffic rules, laws and regulations on accident-incurred liabilities for its amart car industry. Economic Information Daily reportrd Thursday.</p>
+        <div class="login">
+            <h1>CREATE YOUR ACCOUNT</h1>
+            <p>IT IS ABSOLUTELY FREE</p>
+            <div class="info">
+                <form action="" method="post">
+                    <input type="text" name="email" value="your email" class="in" />
+                    <input type="text" name="password" value="Create your password" class="in" />
+                    <input type="submit" value="SIGN UP" class="btn" />
+                </form>
+            </div>
+            <!--info end-->
+        </div>
+        <!--login end-->
+    </div>
+<!--header end-->
+    <div class="feature">
+        <p>Boatloads of Awesome</p>
+        <h1>Ready-made, customizable, HTML landing page sections</h1>
+        <div class="item">
+            <div class="item1">
+                <img src="images/Iphone Icon.png" />
+                <h3>Mobile First</h3>
+                <p>All modulz are built mobile-first for maximum device compatibil</p>
+            </div>
+            <div class="item1">
+                <img src="images/Check Icon.png" />
+                <h3>Accessibility</h3>
+                <p>Support for IE8, mobile and tablet devices, screenreaders and color blind.</p>
+            </div>
+            <div class="item1">
+                <img src="images/Pencil Icon.png" />
+                <h3>Fluid Typography</h3>
+                <p>On different screen sizes, fonts automagically scale with the viewport.</p>
+            </div>
+            <div class="item1">
+                <img src="images/Settings Icon.png" />
+                <h3>Customization</h3>
+                <p>Make any design your own using the Style Editor. Personalize fonts. colors and layouts to create the custom look you want.</p>
+            </div>
+        </div>
+    </div>
+<!--feature end-->
+    <div class="action">
+        <div class="left">
+            <h1>Supportive policies for China's smart car</h1>
+            <p>China will come up with its own smart car standards.traffic rules.laws and regulations relating ti safety.
+            according to the China Industy Innovation Alliance for the Intell-gent and Connected Vehicles.</p>
+            <a href="#">CHECK OUT FEATURES</a>
+            <a href="#">TRY PRODUCT FOR FREE</a>
+        </div>
+        <div class="right">
+            <div class="circle"></div>
+            <img src="images/Screen.png" />
+            <
+        </div>
+        <div class="clearfix"></div>
+    </div>
+<!--action end-->
+    <div class="feature1">
+        <h1>Try Our Awesome Products</h1>
+        <div class="logos">
+            <div class="text1">
+                <img src="images/Singleton.png" />
+                <p>Li Jun, a China Academy of Engineering academician and also director of the alliance's expert's
+                committee.said that China will also launch design guidance for smart cars.smart map architec-ture and standards for test grounds</p>
+            </div>
+            <div class="text1">
+                <img src="images/Hero.png" />
+                <p>Li said the smart car industry is able to enlarge the current car industry by 1 trillion yuan
+                    ($158.15 billon) and also able to boost fast development in 5G.internet of cars.big data.artificial
+                    intelligence and new-energy vehicles.</p>
+            </div>
+            <div class="text1">
+                <img src="images/Portland.png" />
+                <p>Zhang Junyi, a partner with NIO Capital, said that the smart car is the trend for the industry
+                    and China's auto sector will usher in a new key development stage with the improvement or
+                    infrastructure technology of indrastructure. technology.policies and laws.</p>
+            </div>
+        </div>
+    </div>
+<!--feature1 end-->
+
+    <div class="feature2">
+        <div class="content">
+            <img src="images/Photo.png" />
+            <div class="content1">
+                <h1>Learn How to Improve Your Personal Business</h1>
+                <p>Li Jun, a China Academy of Engineering academician and also director of the alliance's expert's
+                    committee.said that China will also launch design guidance for smart cars.smart map architec-ture and standards for test grounds</p>
+            </div>
+            <div class="content1">
+                <h1>Choose Between Two Beautifully Designed Color Schemes.</h1>
+                <p>China will come up with its own smart car standards.traffic rules.laws and regulations relating ti safety.
+                    according to the China Industy Innovation Alliance for the Intell-gent and Connected Vehicles.</p>
+            </div>
+            <img src="images/Photo1.png" />
+        </div>
+    </div>
+<!--feature2 end-->
+
+    <div class="feature3">
+        <h1>Our Awesome Crew</h1>
+        <p>Our unique online teaching style makes learning easy for everyone Whether you are trying to land a new
+            job. brush uo on your skills.</p>
+        <div class="content3">
+            <div class="img_content3">
+                <a href="#"><img src="images/Userpic 1.png"/></a>
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <p>SENIOR VISUAL DENSIGNER</p>
+                    <a href="#"><img src="images/Facebook.png"/></a>
+                    <a href="#"><img src="images/Instagram.png"/></a>
+                    <a href="#"><img src="images/Twitter.png"/></a>
+                </div>
+            </div>
+            <!--img_content3 end-->
+            <div class="img_content3">
+                <a href="#"><img src="images/Userpic 2.png"/></a>
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <p>SENIOR VISUAL DENSIGNER</p>
+                    <a href="#"><img src="images/Facebook.png"/></a>
+                    <a href="#"><img src="images/Instagram.png"/></a>
+                    <a href="#"><img src="images/Twitter.png"/></a>
+                </div>
+            </div>
+            <!--img_content3 end-->
+            <div class="img_content3">
+                <a href="#"><img src="images/Userpic 3.png"/></a>
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <p>SENIOR VISUAL DENSIGNER</p>
+                    <a href="#"><img src="images/Facebook.png"/></a>
+                    <a href="#"><img src="images/Instagram.png"/></a>
+                    <a href="#"><img src="images/Twitter.png"/></a>
+
+                </div>
+            </div>
+            <!--img_content3 end-->
+            <div class="img_content3">
+                <a href="#"><img src="images/Userpic 4.png"/></a>
+                <div class="mask">
+                    <h1>Ethan Dutton</h1>
+                    <p>SENIOR VISUAL DENSIGNER</p>
+                    <a href="#"><img src="images/Facebook.png"/></a>
+                    <a href="#"><img src="images/Instagram.png"/></a>
+                    <a href="#"><img src="images/Twitter.png"/></a>
+                </div>
+            </div>
+            <!--img_content3 end-->
+        </div>
+        <!--content3 end-->
+    </div>
+<!--feature3 end-->
+    <div class="feature4">
+        <div class="contact">
+            <div class="form">
+                <form action="" method="post" >
+                    <h1>FELL FREE TO WRITE US</h1>
+                    <input type="email" value="E-mail" class="show"/>
+                    <input type="text" value="Subject" class="show"/>
+                    <textarea class="show1">Message</textarea>
+                    <input type="submit" value="SEND" class="btn1">
+                </form>
+            </div>
+            <div class="contacts">
+                <h1>Contacts</h1>
+                <p>Make any design your own using the Style Editor. Personalize forts.colors and layouts to create the custom look you want.</p>
+                <div class="link"><img src="images/Map Icon.png" /><a href="#">360 King Street Feastrvale Trevose, PA 19057 </a></div>
+                <div class="link"><img src="images/Phone Icon.png" /><a href="#">(755) 564-84-12</a></div>
+                    <div class="link"><img src="images/Mail Icon.png" /><a href="#">youname@mail.com</a></div>
+            </div>
+        </div>
+<!--contact end-->
+    </div>
+<!--feature4 end-->
+
+    <div class="footer">
+        <div class="footer_content">
+            <ul>
+                <li><a hhref="#">LEARN MORE</a>
+                    <ul>
+                        <li><a href="#">How it work?</a></li>
+                        <li><a href="#">Meeting tools</a></li>
+                        <li><a herf="#">Live streeming</a></li>
+                        <li><a href="#">Contact method</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ABOUT US</a>
+                    <ul>
+                        <li><a herf="#">About us</a></li>
+                        <li><a herf="#">Features</a></li>
+                        <li><a herf="#">Privacy police</a></li>
+                        <li><a herf="#">Terms&Conditions</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">SUPPORT</a>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Cantacts us</a></li>
+                        <li><a href="#">Live chat</a></li>
+                        <li><a href="#">Photo call</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ENJOY YOUR LIFE</a>
+                    <ul>
+                        <li><p>Creat Web UI kit for designers freeancers or business</p></li>
+                        <li>
+                            <a href="#"><img src="images/Twitter Icon.png"></a>
+                            <a href="#"><img src="images/Facebook Icon.png"></a>
+                            <a href="#"><img src="images/Tumbler Icon.png"></a>
+                            <a href="#"><img src="images/Pinterest Icon.png"></a>
+                            <a href="#"><img src="images/LinkedIn Icon.png"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
